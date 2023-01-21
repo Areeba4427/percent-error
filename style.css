@@ -61,7 +61,7 @@ form {
     padding: 50px 5px;
 }
 
-#result{
+#result , #result1{
     font-size: 22px;
 }
 .question-mark {
@@ -175,6 +175,16 @@ input:first-child {
      margin-top: 250px;
 
  }
+ .center-button-container {
+    display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  
+}
+.center-button-container div{
+    padding-top: 20px !important;
+}
+
  .question-mark {
   width: 30px !important;
   height: 30px !important;
@@ -204,53 +214,58 @@ height: 58px;
 .ppp span{
  width: 258px !important;
 }
+.ppp88 span{
+    width: 258px !important;
+    top:230px !important;
+}   
 
 .pp1 span{
-
+top:310px !important;
  left:85px !important;
 bottom: 3px;
 }
 .pp2 span{
- left:125px !important;
-top:310px !important;
+    top:395px !important;
+ left:95px !important;
 
 }
 .pp3 span{
- top: 390px !important;
+ top: 480px !important;
  left:125px !important;
  
 }
 
 .pp4 span{
- top: 470px !important;
- left:220px !important;
- 
+ top: 560px !important;
+ left:170px !important;
+ height: 70px !important;
 }
 
 
 .pp5 span{
- top: 550px !important;
- left:50px !important;
- /* height: 60px !important; */
- width: 300px !important;
+ top: 640px !important;
+ left:150px !important;
+ height: 80px !important;
+ 
 }
 
 
 .pp6 span{
- top: 630px !important;
- left:95px !important;
- height: 30px !important;
+ top: 720px !important;
+ left:150px !important;
+ height: 80px !important;
 }
 
 }
 
 
-@media  all and  (max-width: 768px){
 
-
-
-}
 @media  all and  (max-width: 467px){
+   .form1 .disclaimer{
+        position: absolute !important;
+        margin-top:-36px !important;
+        margin-left: 80px !important;
+    }
  form{
      width: 330px;
      height: 890px;
@@ -263,17 +278,21 @@ font-size: 8px !important;
     left:30px !important;
     top:180px !important;
     width: 200px;
-   height: 158px ;
+   height: 128px ;
    }
    .ppp span{
     width: 258px !important;
-    height: 60px !important;
+    height: 40px !important;
    }
-   
+   .ppp88 span{
+    top:260px !important;
+    width: 258px !important;
+    height: 40px !important;
+   }
    .pp1 span{
    
     
-    top:260px !important;
+    top:340px !important;
     left:85px !important;
    bottom: 3px;
    height: 60px !important;
@@ -281,23 +300,23 @@ font-size: 8px !important;
    .pp2 span{
     
     left:85px !important;
-    top:340px !important;
+    top:430px !important;
 height: 60px !important;   
 }
    .pp3 span{
-    top: 420px !important;
+    top: 510px !important;
     left:85px !important;
     height: 60px !important;
    }
    
    .pp4 span{
-    top: 500px !important;
+    top: 600px !important;
     left:135px !important;
 height: 60px !important;
 }
 
    .pp5 span{
-    top: 590px !important;
+    top: 670px !important;
     left:80px !important;
     width: 180px !important;
     height:60px !important ;
@@ -305,7 +324,7 @@ height: 60px !important;
    
    
    .pp6 span{
-    top: 670px !important;
+    top: 760px !important;
     left:85px !important;
     height: 60px !important;
    }
@@ -386,6 +405,12 @@ svg:not(:host).svg-inline--fa {
  height: 35px;
 }
 
+.ppp88 span{
+    top: 138px;
+    left:430px;
+    display: none;
+    height: 37px;
+   }
 
 .pp2 span{
  top: 220px;
@@ -425,7 +450,7 @@ svg:not(:host).svg-inline--fa {
  top: 378px;
  left:460px;
  display: none;
- height: 37px;
+ height: 49px;
 }
 .disclaimer{
     position: absolute !important;
@@ -436,6 +461,7 @@ svg:not(:host).svg-inline--fa {
     .container {
         top: 10px; /* adjust as needed */
     }
+ 
 }
 
 #container{
