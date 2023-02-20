@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=1234">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
     <link href="style.css" rel="stylesheet">
     <style>
     </style>
-    <title>Profit & Margin Calculator</title>
+    <title>Percent Error Calculator</title>
 </head>
 
 <body>
@@ -25,178 +25,55 @@
         <form name="myform" class="form1">
             <div id="modal-text" class="disclaimer"
                 style="display:none;font-size: 15px;color:red !important;text-align: center;font-weight: 300;">
-                <p>Please fill product name.</p>
+                <p>Please fill Estimated value.</p>
             </div>
             <div id="modal-text1" class="disclaimer"
-            style="display:none;font-size: 15px;color:red !important;text-align: center;font-weight: 300;">
-            <p>Please fill Cost of Item/Sell Price.</p>
-        </div>
-            <div id="modal-text2" class="disclaimer"
                 style="display:none;font-size: 15px;color:red !important;text-align: center;font-weight: 300;">
-                <p>Please fill relevant fields to Calculate.</p>
+                <p>Please fill Actual Value.</p>
             </div>
-            <h3 id="myhead">Profit & Margin Calculator</h3>
+         
+            <h3 id="myhead">Percent Error Calculator</h3>
 
 
+            <div class="input-group">
+                <label for="username" class="lab">Estimated Value:&nbsp&nbsp
+                </label>
 
-            <div class="input-labels">
-                <div class="input-group">
-                    <label for="username" class="lab">Product Name:&nbsp&nbsp
-
-                        <div class="css-ebv3qm ppp e1j6iris0"><button type="button"
-                                class="chakra-button tooltip-button css-17p4kgf" onmouseover="hover(0)"
-                                onmouseleave="dis(0)">
-                                <div class="question-mark"></div>
-                            </button><span class='blip' id="display0">Name of the product you have
-                                purchased.</span>
-                        </div>
-                    </label>
-
-                    <input type="text" id="name" onfocus="clean(this)">
-
-
-
-                </div>
-                <div class="input-group">
-                    <label for="username" class="lab">Cost of Item:&nbsp&nbsp
-
-                        <div class="css-ebv3qm ppp88 e1j6iris0"><button type="button"
-                                class="chakra-button tooltip-button css-17p4kgf" onmouseover="hover(1)"
-                                onmouseleave="dis(1)">
-                                <div class="question-mark"></div>
-                            </button><span class='blip' id="display1">Calculate using our product cost calculator.</span>
-                        </div>
-                    </label>
-
-                    <input type="number" id="cost" onfocus="clean(this)" onchange="netprofit()">
-
-
-                </div>
-            </div>
-            <div class="input-labels">
-                <div class="input-group">
-                    <label for="password">Sell Price:
-                        &nbsp&nbsp
-
-                        <div class="css-ebv3qm pp1 e1j6iris0"><button type="button"
-                                class="chakra-button tooltip-button css-17p4kgf" onmouseover="hover(2)"
-                                onmouseleave="dis(2)">
-                                <div class="question-mark"></div>
-                            </button><span class="blip" id="display2">Price you are selling product for.</span></div>
-                    </label>
-                    <input type="number" id="quan" onfocus="clean(this)"  onchange="merchantfee();netprofit()"  >
-                </div>
-
-
-                <div class="input-group">
-                    <label for="cost">Merchant Fee:
-                        &nbsp&nbsp
-
-                        <div class="css-ebv3qm pp2 e1j6iris0"><button type="button"
-                                class="chakra-button tooltip-button css-17p4kgf" onmouseover="hover(3)"
-                                onmouseleave="dis(3)">
-                                <div class="question-mark"></div>
-                            </button><span class="blip" id="display3">PayPal & Shopify fee, .029 x <br>sell price +
-                                .30</span></div>
-                    </label>
-                    <input type="number" id="prod"  readonly>
-                </div>
-            </div>
-            <div class="input-labels">
-                <div class="input-group">
-                    <label for="ship">Postage Fee:
-                        &nbsp&nbsp
-
-                        <div class="css-ebv3qm pp3 e1j6iris0"><button type="button"
-                                class="chakra-button tooltip-button css-17p4kgf" onmouseover="hover(4)"
-                                onmouseleave="dis(4)">
-                                <div class="question-mark"></div>
-                            </button><span class="blip" id="display4">Shipping fees paid by seller<br> to ship
-                                product.</span></div>
-                    </label>
-                    <input type="number" id="ship" onfocus="clean(this)" onchange="netprofit()">
-                </div>
-
-
-                <div class="input-group">
-                    <label for="password">Packaging Fee:
-                        &nbsp&nbsp
-
-                        <div class="css-ebv3qm pp4 e1j6iris0"><button type="button"
-                                class="chakra-button tooltip-button css-17p4kgf" onmouseover="hover(5)"
-                                onmouseleave="dis(5)">
-                                <div class="question-mark"></div>
-                            </button><span class="blip" id="display5">Cost of goods required to package product for
-                                shipping.</span></div>
-                    </label>
-                    <input type="number" id="pckg" onfocus="clean(this)" onchange="netprofit()">
-                </div>
+                <input type="text" id="name">
 
             </div>
-            <div class="input-labels">
-                <div class="input-group">
-                    <label for="password">Item Net Profit:
 
-                        &nbsp&nbsp
+            <div class="input-group">
+                <label for="username" class="lab">Actual Value:&nbsp&nbsp
 
-                        <div class="css-ebv3qm pp5 e1j6iris0"><button type="button"
-                                class="chakra-button tooltip-button css-17p4kgf" onmouseover="hover(6)"
-                                onmouseleave="dis(6)">    
-                                <div class="question-mark"></div>
-                            </button><span class="blip" id="display6">Profit after deducting total costs and <br>expenses of
-                                your product.</span></div>
+                </label>
+
+                <input type="number" id="cost" >
 
 
-                    </label>
-                    <input type="number" id="tax" readonly>
-                </div>
-
-
-                <div class="input-group">
-                    <label for="password">Bulk Item Sell:
-
-                        &nbsp&nbsp
-
-                        <div class="css-ebv3qm pp6 e1j6iris0"><button type="button"
-                                class="chakra-button tooltip-button css-17p4kgf" onmouseover="hover(7)"
-                                onmouseleave="dis(7)">
-                                <div class="question-mark"></div>
-                            </button><span class="blip" id="display7">Determine how much you would make selling all of
-                                your product inventory.</span></div>
-
-                    </label>
-                    <input type="number" id="duty" onfocus="clean(this)">
-                </div>
             </div>
 
-            <div id="dynamic">
+
+            <div class="input-group">
+                <label for="password">Percent Error:
+                    &nbsp&nbsp
+
+                </label>
+                <input id="quan"  readonly="readonly">
             </div>
-            <div id="dynamic1">
-            </div>
-            <div class="center-button-container">
-                <div class="btn1">
-                    <button type="button" onfocus="clear()" onclick="calculateprofit()" id="cal"
-                    class="golden-button">Profit Margin</button>
-                
-                </div>
-                <div class="btn2">
-                    <button type="button" onfocus="clear()" onclick="calculatebulk()" id="cal"
-                    class="golden-button">Bulk Net Profit</button>    
-            
-                </div>
-                   </div>
-            <div id="container">
-                <div class="left">
-                    <img src="https://i.ibb.co/Ssv3ptd/HOW-2-ECOM-logo-B15.png" alt="HOW-2-ECOM-logo-B15" class="logo">
-                </div>
-                <div class="right">
-                    <a href="https://how2ecom.com/" target="_blank" id="link">www.how2ecom.com</a>
-                </div>
+
+
+            <div class="btn2">
+                <button type="button" onclick="netprofit()" id="cal" class="golden-button">Percent
+                    Error</button>
 
             </div>
-        </form>
+    </div>
+
+    </form>
 
     </div>
+
     <script src="func.js"></script>
 </body>
 
