@@ -119,7 +119,7 @@
         .disclaimer {
             position: absolute !important;
             margin-top: -32px !important;
-            margin-left: 170px !important;
+            margin-left: 160px;
         }
 
 
@@ -193,7 +193,7 @@
                 background-color: #00B3E1;
                 position: absolute;
                 transform: translate(-50%, -50%);
-                top: 60%;
+                top: 50%;
                 left: 50%;
                 margin-bottom: 70% !important;
                 border-radius: 10px;
@@ -226,7 +226,7 @@
             form {
                 width: 500px;
                 height: 480px;
-                top: 70%;
+                top: 50%;
 
             }
 
@@ -236,6 +236,8 @@
                 min-width: 100%;
 
             }
+       
+    
         }
 
         @media (max-width: 600px) {
@@ -246,15 +248,15 @@
             form {
                 width: 400px;
                 height: 470px;
-                top: 90%;
+                top: 50%;
+            }
+            .disclaimer {
+                margin-left: 80px !important;
             }
         }
 
         @media all and (max-width: 467px) {
-            .form1 .disclaimer {
-                position: absolute !important;
-                margin-left: 80px !important;
-            }
+     
 
             .golden-button:hover {
                 transform: none !important;
@@ -267,8 +269,12 @@
             form {
                 width: 300px !important;
                 height: 500px !important;
-                top: 90% !important;
+                top: 40% !important;
             }
+            .disclaimer {
+                margin-left: 50px !important;
+            }
+    
         }
 
         @media all and (max-width: 347px) {
@@ -279,11 +285,19 @@
             label {
                 font-size: 12px;
             }
+            .disclaimer {
+                margin-left: 10px !important;
+            }
+    
         }
 
         @media all and (max-width: 277px) {
             form {
                 width: 200px !important;
             }
+            .disclaimer {
+                margin-left: 10px !important;
+            }
+    
 
         }
